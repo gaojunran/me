@@ -6,7 +6,5 @@
 
 
 <template>
-    <section>
-      <p>Hello World!</p>
-    </section>
+
 </template>
