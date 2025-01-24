@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import Button from 'primevue/button';
+import {breakpointsTailwind, useBreakpoints} from "@vueuse/core";
 
 const nav = ref([
   {label: '喜欢', to: '/favourites', icon: 'pi pi-heart'},
@@ -10,22 +11,31 @@ const nav = ref([
 ])
 
 const router = useRouter();
+
+const breakpoints = useBreakpoints(
+    breakpointsTailwind,
+    // { ssrWidth: 768 } // Will enable SSR mode and render like if the screen was 768px wide
+)
+
+const activeBreakpoint = breakpoints.active()
+const isMobile = computed(() => activeBreakpoint.value === '')
+
+
 </script>
 
 <template>
-
-  <div id="bg" class="h-screen w-full px-8">
+  <div id="bg" class="min-h-screen w-full px-8">
     <header>
       <nav class="flex justify-between items-center mb-8">
-        <img src="/avatar.jpg" class="ml-4 mt-4 w-12 h-12 cursor-pointer
+        <img src="/avatar.jpg" class="m-4 w-12 h-12 cursor-pointer
               rounded-full hover:scale-110 transition ease-in-out duration-300" alt="Avatar"
                @click="router.push('/about')"
         />
         <div class="flex justify-end items-center">
           <Button :pt="{ root: '!bg-white/0 hover:!bg-white/20 !text-white/70 ' +
        'hover:!text-white !border-white/0 hover:!scale-110 !transition !ease-in-out !duration-300' }"
-                  v-for="navItem in nav" :label="navItem.label" @click="router.push(navItem.to)" :icon="navItem.icon"
-                  class="m-4"
+                  v-for="navItem in nav" :label="navItem.label" @click="router.push(navItem.to)"
+                  class="my-4 mx-2 sm:mx-4" :size="isMobile ? 'small' : undefined" :icon="isMobile ? '' : navItem.icon"
           ></Button>
         </div>
       </nav>
