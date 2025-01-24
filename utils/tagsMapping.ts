@@ -1,56 +1,56 @@
 
-const languageMapping = [
+const tagsMapping = [
     {
-        "lang": "Python",
+        "tag": "Python",
         "color": "#81c6f8",
     },
     {
-        "lang": "Java",
+        "tag": "Java",
         "color": "#B07219",
     },
     {
-        "lang": "JavaScript",
+        "tag": "JavaScript",
         "color": "#F1E05A",
     },
     {
-        "lang": "C++",
+        "tag": "C++",
         "color": "#F34B7D",
     },
     {
-        "lang": "C",
+        "tag": "C",
         "color": "#555555",
     },
     {
-        "lang": "PHP",
+        "tag": "PHP",
         "color": "#4F5D95",
     },
     {
-        "lang": "Ruby",
+        "tag": "Ruby",
         "color": "#701516",
     },
     {
-        "lang": "Swift",
+        "tag": "Swift",
         "color": "#FFAC45",
     },
     {
-        "lang": "Go",
+        "tag": "Go",
         "color": "#00ADD8",
     },
     {
-        "lang": "Kotlin",
+        "tag": "Kotlin",
         "color": "#C233F1",
     },
     {
-        "lang": "Vue",
+        "tag": "Vue",
         "color": "#41B883",
     },
     {
-        "lang": "Rust",
+        "tag": "Rust",
         "color": "#DEA584",
     }
 ]
 
-export const getLanguageColor = (language: string) => {
-    const lang = languageMapping.find(lang => lang.lang === language);
-    return lang ? lang.color : "#ffffff";
+export const getTagColor = (tag: string) => {
+    const result = tagsMapping.find(item => item.tag === tag);
+    return result ? result.color : "#ffffff";
 }

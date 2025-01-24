@@ -1,0 +1,5 @@
+{
+  "name": "obs-vitesse",
+  "description": "基于Vite/Vue3的OBS直播包装模板。",
+  "tags": ["Vue"]
+}

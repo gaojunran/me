@@ -1,0 +1,5 @@
+{
+  "name": "wordy",
+  "description": "在命令行中查单词、记单词、生成可高度自定义的单词表。",
+  "tags": ["Python", "Typst"]
+}

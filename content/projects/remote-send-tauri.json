@@ -1,0 +1,5 @@
+{
+  "name": "remote-send-tauri",
+  "description": "基于S3存储的跨端远程文件传输助手。",
+  "tags": ["Vue", "Rust"]
+}

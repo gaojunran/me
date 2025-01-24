@@ -2,7 +2,7 @@
 import type {Project} from "~/types/Project";
 import { Tag } from "primevue";
 import {toGithub} from "~/utils/linkTo";
-import {getLanguageColor} from "~/utils/languageMapping";
+import {getTagColor} from "~/utils/tagsMapping";
 const props = defineProps<{
   project: Project
 }>()
@@ -20,13 +20,13 @@ const hover = ref(false)
       <h3 class="text-xl font-bold mb-2">{{ props.project.name }}</h3>
       <p class="text-white/50 text-sm group-hover:text-white transition duration-500">{{ props.project.description }}</p>
       <div class="flex items-center mt-2 gap-2">
-        <Tag v-for="tag in props.project.languages" id="tag"
+        <Tag v-for="tag in props.project.tags" id="tag"
              class="mt-1 transition duration-500"
              :style="hover ? {
-               backgroundColor: getLanguageColor(tag) + '60',
-               color: getLanguageColor(tag)
+               backgroundColor: getTagColor(tag) + '60',
+               color: getTagColor(tag)
              } : {
-               backgroundColor: getLanguageColor(tag) + '10',
+               backgroundColor: getTagColor(tag) + '10',
                color: '#ffffff60'
              }"
              :key="tag" severity="info">{{ tag }}</Tag>
