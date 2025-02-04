@@ -1,0 +1,5 @@
+{
+  "name": "tokei-vscode",
+  "description": "基于Tokei的VSCode插件，直观地统计代码行数。",
+  "tags": ["TypeScript"]
+}

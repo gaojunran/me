@@ -47,6 +47,10 @@ const tagsMapping = [
     {
         "tag": "Rust",
         "color": "#DEA584",
+    },
+    {
+        "tag": "TypeScript",
+        "color": "#3178C6",
     }
 ]
 

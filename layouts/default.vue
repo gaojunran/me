@@ -62,6 +62,6 @@ watch(isMobile, (newVal, _) => {
 
 <style>
 #bg {
-  background: url("/noise-light.png") rgb(54, 86, 107);
+  background: url("/noise-light.png") rgba(0, 0, 0, 0.1);
 }
 </style>
