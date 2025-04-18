@@ -1,7 +1,7 @@
 ---
-title: Blog - Anthony Fu
+title: Blog - CodeNebula
 display: ''
-art: plum
+art: dots
 ---
 
 <SubNav />
