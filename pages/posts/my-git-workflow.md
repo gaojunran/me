@@ -71,7 +71,7 @@ export alias ps = git push -u origin HEAD
 
 可以先创建一个`dev`分支：
 
-```
+```nu
 export def dev [] {
   if (has-branch 'dev') {  # internal
     git switch dev

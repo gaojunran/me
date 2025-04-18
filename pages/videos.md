@@ -6,9 +6,9 @@ art: dots
 
 <SubNav />
 
-<div pt-5 />
+<!-- <div pt-5 /> -->
 
-<div slide-enter>
+<!-- <div slide-enter>
   <div i-ri:presentation-line mr-1 />
   <RouterLink to="/giving-talks" op50>Speaker Info</RouterLink>
 </div>
@@ -39,6 +39,6 @@ art: dots
 
 </details>
 
-<h1 important="mb--4 mt-15">Latest Talks</h1>
+<h1 important="mb--4 mt-15">Latest Talks</h1> -->
 
-<ListTalks />
+<!-- <ListTalks /> -->

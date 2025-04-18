@@ -9,46 +9,8 @@ function slug(name: string) {
 <template>
   <div class="max-w-300 mx-auto">
     <p text-center mt--6 mb5 op50 text-lg italic>
-      Projects that I created or maintaining.
+      我的一些开源项目。
     </p>
-    <div class="prose pb5 mx-auto mt10 text-center">
-      <div flex="~ gap-2 justify-center">
-        <a
-          href="https://github.com/antfu"
-          target="_blank"
-          class="group btn-blue inline-block"
-        >
-          <div
-            i-ph-github-logo-duotone
-            group-hover="i-ph-github-logo-fill text-blue"
-          />
-          GitHub
-        </a>
-        <a
-          href="https://releases.antfu.me"
-          target="_blank"
-          class="group btn-amber inline-block"
-        >
-          <div
-            i-ph-rocket-launch-duotone
-            group-hover="i-ph-rocket-launch-fill text-amber"
-          />
-          Recent Releases
-        </a>
-        <a
-          href="https://yak.antfu.me"
-          target="_blank"
-          class="group btn-lime inline-block"
-        >
-          <div
-            i-ph-cow-duotone
-            group-hover="i-ph-cow-duotone-fill text-lime"
-          />
-          Yak Map
-        </a>
-      </div>
-      <hr>
-    </div>
     <div
       v-for="key, cidx in Object.keys(projects)" :key="key" slide-enter
       :style="{ '--enter-stage': cidx + 1 }"
@@ -94,11 +56,10 @@ function slug(name: string) {
       </div>
     </div>
     <div class="prose pb5 mx-auto mt10 text-center">
-      <div block mt-5>
+      <!-- <div block mt-5>
         <a href="https://antfu.me/stars-rank" target="_blank" op50>All projects sort by Stars</a>
-      </div>
+      </div> -->
       <hr>
-      <SponsorButtons />
     </div>
   </div>
   <div>
