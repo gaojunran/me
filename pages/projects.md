@@ -5,6 +5,11 @@ description: List of projects that I am proud of
 wrapperClass: 'text-center'
 art: dots
 projects:
+  TODO:
+    - name: 'TODO'
+      link: 'https://github.com/antfu/todo'
+      desc: 'A simple TODO app'
+      icon: 'i-logos-vue'
   # Current Focus:
   #   - name: 'Vite DevTools'
   #     link: 'https://github.com/antfu/vite-devtools'
