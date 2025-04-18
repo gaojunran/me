@@ -1,4 +1,5 @@
 {
+  // use Anthony Fu's config
   // Enable the flat config support
   "eslint.experimental.useFlatConfig": true,
 
