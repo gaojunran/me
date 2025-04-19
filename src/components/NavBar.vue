@@ -46,10 +46,10 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
-        <a href="https://github.com/antfu" target="_blank" title="GitHub" >
+        <a href="https://github.com/gaojunran" target="_blank" title="GitHub">
           <div i-uil-github-alt />
         </a>
-        
+
         <ToggleTheme />
       </div>
     </nav>
