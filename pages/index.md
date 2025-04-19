@@ -24,10 +24,8 @@ art: dots
 
 我的社交平台：
   <a href="https://github.com/antfu" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
-  <a ml-4 href="https://space.bilibili.com/668380" target="_blank"><span op75 i-simple-icons-bilibili /> 哔哩哔哩</a>
+  <a ml-4 href="https://space.bilibili.com/3493089530350281" target="_blank"><span op75 i-simple-icons-bilibili /> 哔哩哔哩</a>
 
-或者发邮件给我： <span font-mono>nebula2021<span i-carbon-at/>126.com</span>
+发邮件给我： <span font-mono>nebula2021<span i-carbon-at/>126.com</span>
 
 欢迎加入我的QQ群：<span font-mono>1037341972</span>，一起交流和进步！
-
-

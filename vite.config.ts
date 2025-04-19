@@ -131,7 +131,7 @@ export default defineConfig({
             TypeScript: 'https://www.typescriptlang.org/',
             Rust: 'https://github.com/rust-lang/rust',
             Kotlin: 'https://kotlinlang.org/',
-            Bilibili: 'https://www.bilibili.com/',
+            Bilibili: 'https://space.bilibili.com/3493089530350281',
             // 'NuxtLabs': 'https://nuxtlabs.com',
             // 'Vitest': 'https://github.com/vitest-dev/vitest',
             // 'Slidev': 'https://github.com/slidevjs/slidev',
@@ -171,24 +171,24 @@ export default defineConfig({
 
         md.use(GitHubAlerts)
       },
-      frontmatterPreprocess(frontmatter, options, id, defaults) {
-        (() => {
-          if (!id.endsWith('.md'))
-            return
-          const route = basename(id, '.md')
-          if (route === 'index' || frontmatter.image || !frontmatter.title)
-            return
-          const path = `og/${route}.png`
-          promises.push(
-            fs.existsSync(`${id.slice(0, -3)}.png`)
-              ? fs.copy(`${id.slice(0, -3)}.png`, `public/${path}`)
-              : generateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`),
-          )
-          frontmatter.image = `https://antfu.me/${path}`
-        })()
-        const head = defaults(frontmatter, options)
-        return { head, frontmatter }
-      },
+      // frontmatterPreprocess(frontmatter, options, id, defaults) {
+      //   (() => {
+      //     if (!id.endsWith('.md'))
+      //       return
+      //     const route = basename(id, '.md')
+      //     if (route === 'index' || frontmatter.image || !frontmatter.title)
+      //       return
+      //     const path = `og/${route}.png`
+      //     promises.push(
+      //       fs.existsSync(`${id.slice(0, -3)}.png`)
+      //         ? fs.copy(`${id.slice(0, -3)}.png`, `public/${path}`)
+      //         : generateOg(frontmatter.title!.replace(/\s-\s.*$/, '').trim(), `public/${path}`),
+      //     )
+      //     frontmatter.image = `https://antfu.me/${path}`
+      //   })()
+      //   const head = defaults(frontmatter, options)
+      //   return { head, frontmatter }
+      // },
     }),
 
     AutoImport({
@@ -248,29 +248,29 @@ export default defineConfig({
 
 const ogSVg = fs.readFileSync('./scripts/og-template.svg', 'utf-8')
 
-async function generateOg(title: string, output: string) {
-  if (fs.existsSync(output))
-    return
+// async function generateOg(title: string, output: string) {
+//   if (fs.existsSync(output))
+//     return
 
-  await fs.mkdir(dirname(output), { recursive: true })
-  // breakline every 30 chars
-  const lines = title.trim().split(/(.{0,30})(?:\s|$)/g).filter(Boolean)
+//   await fs.mkdir(dirname(output), { recursive: true })
+//   // breakline every 30 chars
+//   const lines = title.trim().split(/(.{0,30})(?:\s|$)/g).filter(Boolean)
 
-  const data: Record<string, string> = {
-    line1: lines[0],
-    line2: lines[1],
-    line3: lines[2],
-  }
-  const svg = ogSVg.replace(/\{\{([^}]+)\}\}/g, (_, name) => data[name] || '')
+//   const data: Record<string, string> = {
+//     line1: lines[0],
+//     line2: lines[1],
+//     line3: lines[2],
+//   }
+//   const svg = ogSVg.replace(/\{\{([^}]+)\}\}/g, (_, name) => data[name] || '')
 
-  console.log(`Generating ${output}`)
-  try {
-    await sharp(Buffer.from(svg))
-      .resize(1200 * 1.1, 630 * 1.1)
-      .png()
-      .toFile(output)
-  }
-  catch (e) {
-    console.error('Failed to generate og image', e)
-  }
-}
+//   console.log(`Generating ${output}`)
+//   try {
+//     await sharp(Buffer.from(svg))
+//       .resize(1200 * 1.1, 630 * 1.1)
+//       .png()
+//       .toFile(output)
+//   }
+//   catch (e) {
+//     console.error('Failed to generate og image', e)
+//   }
+// }
