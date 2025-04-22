@@ -1,12 +1,22 @@
 ---
-title: Talks - Anthony Fu
+title: Videos - CodeNebula
 display: ''
 art: dots
 ---
 
 <SubNav />
 
-<!-- <div pt-5 /> -->
+<div pt-5 />
+
+<div flex justify-center mr-5>
+<a href="https://space.bilibili.com/3493089530350281" target="\_blank" class="group btn-amber inline-block text-center">
+
+<div  i-simple-icons:bilibili group-hover=" text-amber" />
+我的视频主页
+</a>
+</div>
+
+- [蓝桥杯 Web 组备赛视频](https://www.bilibili.com/video/BV1XqN6eBEzT/)
 
 <!-- <div slide-enter>
   <div i-ri:presentation-line mr-1 />

@@ -129,9 +129,10 @@ export default defineConfig({
             重庆邮电大学: 'https://www.cqupt.edu.cn/',
             Vue: 'https://vuejs.org/',
             TypeScript: 'https://www.typescriptlang.org/',
-            Rust: 'https://github.com/rust-lang/rust',
+            Rust: 'https://www.rust-lang.org',
             Kotlin: 'https://kotlinlang.org/',
             Bilibili: 'https://space.bilibili.com/3493089530350281',
+            爱发电: 'https://afdian.tv/a/CodeNebula',
             // 'NuxtLabs': 'https://nuxtlabs.com',
             // 'Vitest': 'https://github.com/vitest-dev/vitest',
             // 'Slidev': 'https://github.com/slidevjs/slidev',
@@ -246,7 +247,7 @@ export default defineConfig({
   },
 })
 
-const ogSVg = fs.readFileSync('./scripts/og-template.svg', 'utf-8')
+// const ogSVg = fs.readFileSync('./scripts/og-template.svg', 'utf-8')
 
 // async function generateOg(title: string, output: string) {
 //   if (fs.existsSync(output))
