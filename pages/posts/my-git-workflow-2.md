@@ -33,8 +33,8 @@ A  1.txt
 
 ```nushell
 def git-status [
-  --only-staged (-s)  # ONLY show tracked files
-  --only-unstaged (-u)  # ONLY show untracked files
+  --only-staged (-s)
+  --only-unstaged (-u)
 ] { ... }
 ```
 
@@ -73,7 +73,7 @@ export def git-status [
 }
 ```
 
-## `Stage`
+## `Stage`, `Switch`
 
 在我之前版本的脚本里，都是直接将所有工作区的文件都加入暂存区，即`git add .`。但我在实际使用中发现，通常有些文件是想**稍后再提交**的，就不该放进暂存区。所以有一个交互式选择`stage`的功能会更方便一些。
 
@@ -146,17 +146,32 @@ let ref = git stash list --grep="STASH-dev" --format="%gd"
 git stash pop ($ref) # 弹出这条，并应用于当前分支
 ```
 
+另外，如果没有给`smart-switch`函数传递参数，则启动一个交互式选择器来选择分支：
+
+```nushell
+git branch
+| lines | to text
+| fzf
+| str replace -r '^[\*|\s]{2}' '' # 替换掉前面的星号。可以使用`git branch`来看下格式
+| if ($in == "") { return } else { $in }  # 如果fzf直接退出，则直接退出此函数
+```
+
 完整代码考虑了一些边界情况，有点长，如下：
 
 ```nushell
 export def smart-switch [
-  target?: string # by default, switch to master or main
+  target?: string # invoke a interactive chooser if not provided
 ] {
   let source = (current-branch)
-  let target =  ($target | default (master-or-main))
+  let target =  ($target | default (git branch
+        | lines | to text
+        | fzf
+        | str replace -r '^[\*|\s]{2}' ''
+        | if ($in == "") { return } else { $in }
+  ))
   if not (has-branch $target) {
     input $"📢 Create `($target)` branch from `($source)`? (y/n/<from which branch>): " | if ($in == "y") {
-      git branch $target 
+      git branch $target
     } else if ($in == "n") {
       return
     } else {
@@ -253,7 +268,6 @@ export def sync [
   smart-switch $target
   git rebase $source
 }
-
 
 # Simply integrate current branch into main branch (by default, or specified branch) using fast-forward merge.
 # After this command, you may want to push both branches to remote.
