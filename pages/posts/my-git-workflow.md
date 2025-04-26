@@ -7,13 +7,9 @@ duration: 10min
 
 最近研究了很久git，因为此前一直在使用git最简单的做法，即`git add . -> git commit -> git push`，直接在`main`分支上工作。学习了很多别人的项目后意识到这样完全不适合多人协作，而且对一些错误操作的容错率也很不理想。因此，我决定重新学习适合自己的git工作流，并记录下来。
 
-## 省流（TLDR）
+> 本文适合有基础git知识的朋友阅读。我整合了三种适合个人项目和小型团队项目的工作流，并以脚本的形式提供。全文使用的都是[`nushell`](https://nushell.sh)脚本。
 
-本文适合有基础git知识的朋友阅读。
-
-我整合了三种适合个人项目和小型团队项目的工作流，并以脚本的形式提供。目前提供了通用性较强的`bash`脚本和我自己在使用的`nushell`脚本两种。
-
-## ⭐ 分支管理
+## 分支管理
 
 通常，git和github的默认分支是main（[master和main的区别是什么？](https://zhuanlan.zhihu.com/p/257179306)），你的git如果不是以`main`为默认分支名，可以通过以下命令修改：
 
@@ -210,3 +206,7 @@ export def master-or-main [] {
   }
 }
 ```
+
+> 我的脚本全文：[这里](https://github.com/gaojunran/dotfiles/blob/main/dot_config/scripts/git.nu)。
+
+> 我的下一篇 git 工作流的博文：[这里](/posts/my-git-workflow-2)。
