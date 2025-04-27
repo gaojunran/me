@@ -5,6 +5,8 @@ lang: zh
 duration: 10min
 ---
 
+[[toc]]
+
 最近研究了很久git，因为此前一直在使用git最简单的做法，即`git add . -> git commit -> git push`，直接在`main`分支上工作。学习了很多别人的项目后意识到这样完全不适合多人协作，而且对一些错误操作的容错率也很不理想。因此，我决定重新学习适合自己的git工作流，并记录下来。
 
 > 本文适合有基础git知识的朋友阅读。我整合了三种适合个人项目和小型团队项目的工作流，并以脚本的形式提供。全文使用的都是[`nushell`](https://nushell.sh)脚本。
@@ -41,8 +43,8 @@ export def cm [message?: string] {
   if ($message == null) {
     git add .
     print "📝 All changes are staged. Diff:"
-    git diff --cached --numstat 
-            | lines | parse "{added}\t{removed}\t{file}" 
+    git diff --cached --numstat
+            | lines | parse "{added}\t{removed}\t{file}"
             | rename "+" "-" "file" | print
     git diff --cached | bat --style=grid --color=always
   } else {
