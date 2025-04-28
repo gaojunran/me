@@ -5,7 +5,7 @@ lang: en
 duration: 12min
 ---
 
-> Translated from [this post](/posts/a-discussion-about-oj-of-ed-discussion).
+> Translated from [this post](/posts/a-discussion-about-oj-of-ed-discussion-zh).
 
 ## TL;DR
 
@@ -41,7 +41,7 @@ This logic is likely designed by the professor to check if the directories are s
 
 When clicking the "Run" button, there is NO file change in the HOME directory. I made the following attempts to investigate:
 
-> In these attempts, I kept the code as short as possible and included minimal logic to rule out other interfering factors. This follows the GitHub open-source debugging principle of *minimal reproduction*.
+> In these attempts, I kept the code as short as possible and included minimal logic to rule out other interfering factors. This follows the GitHub open-source debugging principle of _minimal reproduction_.
 
 ### Guess 1: The source code is copied to another folder on this virtual machine for execution
 
@@ -101,6 +101,7 @@ ls /tmp
 ```
 
 The output was:
+
 ```
 123    run
 ```
@@ -116,6 +117,7 @@ int main() {
 ```
 
 The output was:
+
 ```
 run
 ```
@@ -126,7 +128,7 @@ This explains the unusual behaviors:
 
 - After clicking the "Run" button, the directories were not created locally because they were created in **another evaluation virtual machine**.
 - After clicking the "Run" button, no compilation results were produced locally because they were compiled in **another evaluation virtual machine**.
-- However, it was still compiled and executed in the HOME folder on that virtual machine, and the standard output was forwarded back to this terminal, which make us think that the program was running *locally*.
+- However, it was still compiled and executed in the HOME folder on that virtual machine, and the standard output was forwarded back to this terminal, which make us think that the program was running _locally_.
 
 ---
 
@@ -134,4 +136,4 @@ This explains the unusual behaviors:
 
 You might find that after all these efforts, I ended up with a very simple conclusion that seems not to matter much 😭.
 
-But this is a very typical *debugging on environment* process. Understanding this was quite interesting to me, and I hope you can also learn something from this article!
+But this is a very typical _debugging on environment_ process. Understanding this was quite interesting to me, and I hope you can also learn something from this article!
