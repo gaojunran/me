@@ -23,6 +23,8 @@ declare module 'vue-router/auto-routes' {
     '/bookmarks': RouteRecordInfo<'/bookmarks', '/bookmarks', Record<never, never>, Record<never, never>>,
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
+    '/posts/a-discussion-about-oj-of-ed-discussion': RouteRecordInfo<'/posts/a-discussion-about-oj-of-ed-discussion', '/posts/a-discussion-about-oj-of-ed-discussion', Record<never, never>, Record<never, never>>,
+    '/posts/a-discussion-about-oj-of-ed-discussion-zh': RouteRecordInfo<'/posts/a-discussion-about-oj-of-ed-discussion-zh', '/posts/a-discussion-about-oj-of-ed-discussion-zh', Record<never, never>, Record<never, never>>,
     '/posts/ai-works-for-you': RouteRecordInfo<'/posts/ai-works-for-you', '/posts/ai-works-for-you', Record<never, never>, Record<never, never>>,
     '/posts/how-i-manage-environment-versions': RouteRecordInfo<'/posts/how-i-manage-environment-versions', '/posts/how-i-manage-environment-versions', Record<never, never>, Record<never, never>>,
     '/posts/my-git-workflow': RouteRecordInfo<'/posts/my-git-workflow', '/posts/my-git-workflow', Record<never, never>, Record<never, never>>,
