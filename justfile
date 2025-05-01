@@ -1,5 +1,5 @@
 dev:
-  pnpm run dev --port=4000 --host 
-  firefox http://localhost:4000
+  pnpm run dev --port=3333 --host 
+  # firefox http://localhost:3333
 
 
