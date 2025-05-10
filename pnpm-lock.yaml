@@ -72,6 +72,13 @@ catalogs:
     vite-svg-loader:
       specifier: ^5.1.0
       version: 5.1.0
+  default:
+    '@iconify-json/lucide':
+      specifier: ^1.2.41
+      version: 1.2.41
+    '@iconify-json/material-symbols-light':
+      specifier: ^1.2.20
+      version: 1.2.20
   dev:
     '@antfu/eslint-config':
       specifier: ^4.11.0
@@ -304,10 +311,10 @@ importers:
         specifier: catalog:frontend
         version: 9.2.0
       '@iconify-json/lucide':
-        specifier: ^1.2.41
+        specifier: 'catalog:'
         version: 1.2.41
       '@iconify-json/material-symbols-light':
-        specifier: ^1.2.20
+        specifier: 'catalog:'
         version: 1.2.20
       '@iconify/json':
         specifier: catalog:dev
