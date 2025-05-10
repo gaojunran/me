@@ -84,6 +84,23 @@ html:not(.dark) .shiki span {
   color: inherit;
 }
 
+code .diff {
+  transition: background-color .5s;
+  margin: 0 -24px;
+  padding: 0 24px;
+  width: calc(100% + 48px);
+  display: inline-block;
+}
+
+code .diff.add {
+  background-color: rgba(16, 185, 129, .16);
+}
+
+code .diff.add:before {
+  content: "+";
+  color: #3dd68c;
+}
+
 .prose hr {
   width: 50px;
   margin: 2em auto;
