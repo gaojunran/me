@@ -303,6 +303,12 @@ importers:
       '@antfu/utils':
         specifier: catalog:frontend
         version: 9.2.0
+      '@iconify-json/lucide':
+        specifier: ^1.2.41
+        version: 1.2.41
+      '@iconify-json/material-symbols-light':
+        specifier: ^1.2.20
+        version: 1.2.20
       '@iconify/json':
         specifier: catalog:dev
         version: 2.2.323
@@ -864,6 +870,12 @@ packages:
   '@humanwhocodes/retry@0.4.2':
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/lucide@1.2.41':
+    resolution: {integrity: sha512-rOOahfHMgWPqLyRLvLSqEwCmS4jEDxB1Pk63QTe0GObLBKgYKlPmuc1zKYzSuPPkLX/ND7rScVOIDb//ggMNzg==}
+
+  '@iconify-json/material-symbols-light@1.2.20':
+    resolution: {integrity: sha512-xGPhQR80cNLAXRKAlbHQJednqaimVBqQGTz3WZUlStzIaUhrbVpFscyQT/taAe0X9+Ra6XlhsIN+MPG8HDJCeA==}
 
   '@iconify/json@2.2.323':
     resolution: {integrity: sha512-PtRN4hK9OkT2nlEa76A5QT54E6/SOukceKQkOZv9mk44UOlaS/9fhJFNUEA+FBAXEPcnnCQb2nVui+IAn7xTSw==}
@@ -4396,6 +4408,14 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.2': {}
+
+  '@iconify-json/lucide@1.2.41':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols-light@1.2.20':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/json@2.2.323':
     dependencies:

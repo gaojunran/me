@@ -36,6 +36,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
     "@antfu/utils": "catalog:frontend",
+    "@iconify-json/lucide": "^1.2.41",
+    "@iconify-json/material-symbols-light": "^1.2.20",
     "@iconify/json": "catalog:dev",
     "@octokit/core": "catalog:dev",
     "@octokit/rest": "catalog:dev",
