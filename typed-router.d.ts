@@ -31,6 +31,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/do-not-install-macos-in-external-disk': RouteRecordInfo<'/posts/do-not-install-macos-in-external-disk', '/posts/do-not-install-macos-in-external-disk', Record<never, never>, Record<never, never>>,
     '/posts/how-i-manage-environment-versions': RouteRecordInfo<'/posts/how-i-manage-environment-versions', '/posts/how-i-manage-environment-versions', Record<never, never>, Record<never, never>>,
     '/posts/lanqiao-2023-1': RouteRecordInfo<'/posts/lanqiao-2023-1', '/posts/lanqiao-2023-1', Record<never, never>, Record<never, never>>,
+    '/posts/lanqiao-2023-2': RouteRecordInfo<'/posts/lanqiao-2023-2', '/posts/lanqiao-2023-2', Record<never, never>, Record<never, never>>,
     '/posts/my-git-workflow': RouteRecordInfo<'/posts/my-git-workflow', '/posts/my-git-workflow', Record<never, never>, Record<never, never>>,
     '/posts/my-git-workflow-2': RouteRecordInfo<'/posts/my-git-workflow-2', '/posts/my-git-workflow-2', Record<never, never>, Record<never, never>>,
     '/posts/nushell-introduce': RouteRecordInfo<'/posts/nushell-introduce', '/posts/nushell-introduce', Record<never, never>, Record<never, never>>,
