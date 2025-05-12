@@ -259,9 +259,6 @@ Vue.component('my-select', {
 再来看`checkbox.js`，这个比`select.js`简单一些，就不再赘述了。
 
 ```js
-/*
- * 多选框组件
- */
 const checkboxTemplate = `
 <div class="radio-box">
   <input type="checkbox" :checked="isCheck" @change="change" :id="label">
@@ -291,3 +288,5 @@ Vue.component('my-checkbox', {
   }
 })
 ```
+
+这道题是一个典型的「computed model（双向绑定计算属性）」模型，我专门写了一篇[博客](/posts/vue-computed-model)来介绍这个模型，可以去读一下，希望对你有所帮助。

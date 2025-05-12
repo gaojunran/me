@@ -160,7 +160,7 @@ function setActive(i) {
 ```js
 function randomAllocation(total, n) {
   //  TODO: 待补充代码
-  let result = Array(n).fill(0.01)
+  let result = Array.from({ length: n }).fill(0.01)
   total -= n * 0.01
   for (let i = 0; i < result.length - 1; i++) {
     let money = total * Math.random()
@@ -179,16 +179,16 @@ function randomAllocation(total, n) {
 ```js
 function randomAllocation(total, n) {
   //  TODO: 待补充代码
-  const res = [];
-  let min = 0.01;
+  const res = []
+  let min = 0.01
   for (let i = 0; i < n - 1; i++) {
-    let max = total - (n - i - 1) * min;
-    let money = +(Math.random() * (max - min) + min).toFixed(2);
-    res.push(money);
-    total = total - money;
+    let max = total - (n - i - 1) * min
+    let money = +(Math.random() * (max - min) + min).toFixed(2)
+    res.push(money)
+    total = total - money
   }
-  res.push(+total.toFixed(2));
-  return res;
+  res.push(+total.toFixed(2))
+  return res
 }
 ```
 
