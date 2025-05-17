@@ -6,10 +6,10 @@ import fs from 'fs-extra'
 import matter from 'gray-matter'
 import MarkdownIt from 'markdown-it'
 
-const DOMAIN = 'https://antfu.me'
+const DOMAIN = 'https://codenebula.netlify.app'
 const AUTHOR = {
-  name: 'Anthony Fu',
-  email: 'hi@antfu.me',
+  name: 'CodeNebula',
+  email: 'nebula2021@126.com',
   link: DOMAIN,
 }
 const markdown = MarkdownIt({
@@ -26,15 +26,15 @@ async function buildBlogRSS() {
   const files = await fg('pages/posts/*.md')
 
   const options = {
-    title: 'Anthony Fu',
-    description: 'Anthony Fu\' Blog',
-    id: 'https://antfu.me/',
-    link: 'https://antfu.me/',
-    copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
+    title: 'CodeNebula',
+    description: 'CodeNebula\'s Blog',
+    id: DOMAIN,
+    link: DOMAIN,
+    copyright: 'CC BY-NC-SA 4.0',
     feedLinks: {
-      json: 'https://antfu.me/feed.json',
-      atom: 'https://antfu.me/feed.atom',
-      rss: 'https://antfu.me/feed.xml',
+      json: `${DOMAIN}/feed.json`,
+      atom: `${DOMAIN}/feed.atom`,
+      rss: `${DOMAIN}/feed.xml`,
     },
   }
   const posts: any[] = (
@@ -44,8 +44,9 @@ async function buildBlogRSS() {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
 
-          if (data.lang !== 'en')
-            return
+          // should include all languages
+          // if (data.lang !== 'en')
+          //   return
 
           const html = markdown.render(content)
             .replace('src="/', `src="${DOMAIN}/`)
@@ -71,13 +72,12 @@ async function buildBlogRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'https://antfu.me/avatar.png'
-  options.favicon = 'https://antfu.me/logo.png'
+  // options.image = 'https://antfu.me/avatar.png'
+  // options.favicon = 'https://antfu.me/logo.png'
 
   const feed = new Feed(options)
 
   items.forEach(item => feed.addItem(item))
-  // items.forEach(i=> console.log(i.title, i.date))
 
   await fs.ensureDir(dirname(`./dist/${name}`))
   await fs.writeFile(`./dist/${name}.xml`, feed.rss2(), 'utf-8')
