@@ -79,6 +79,9 @@ catalogs:
     '@iconify-json/material-symbols-light':
       specifier: ^1.2.20
       version: 1.2.20
+    vue-utterances:
+      specifier: ^0.3.4
+      version: 0.3.4
   dev:
     '@antfu/eslint-config':
       specifier: ^4.11.0
@@ -304,7 +307,7 @@ importers:
         specifier: catalog:frontend
         version: 0.0.0(vue-router@4.5.0(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2))
       vue-utterances:
-        specifier: ^0.3.4
+        specifier: 'catalog:'
         version: 0.3.4(vue@3.5.13(typescript@5.8.2))
     devDependencies:
       '@antfu/eslint-config':
