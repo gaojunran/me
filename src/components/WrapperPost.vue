@@ -136,6 +136,7 @@ const ArtComponent = computed(() => {
   </article>
   <div class="my-8" />
   <VueUtterances
+    v-if="/posts\/\w+/.test(route.path)"
     repo="gaojunran/utterances"
     issue-term="pathname"
     theme="github-dark"
