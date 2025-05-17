@@ -36,7 +36,6 @@ declare module 'vue-router/auto-routes' {
     '/posts/my-git-workflow': RouteRecordInfo<'/posts/my-git-workflow', '/posts/my-git-workflow', Record<never, never>, Record<never, never>>,
     '/posts/my-git-workflow-2': RouteRecordInfo<'/posts/my-git-workflow-2', '/posts/my-git-workflow-2', Record<never, never>, Record<never, never>>,
     '/posts/nushell-introduce': RouteRecordInfo<'/posts/nushell-introduce', '/posts/nushell-introduce', Record<never, never>, Record<never, never>>,
-    '/posts/rust-01': RouteRecordInfo<'/posts/rust-01', '/posts/rust-01', Record<never, never>, Record<never, never>>,
     '/posts/smarter-clone': RouteRecordInfo<'/posts/smarter-clone', '/posts/smarter-clone', Record<never, never>, Record<never, never>>,
     '/posts/vue-computed-model': RouteRecordInfo<'/posts/vue-computed-model', '/posts/vue-computed-model', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,

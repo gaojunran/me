@@ -31,7 +31,8 @@
     "simplex-noise": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend",
-    "vue-router-better-scroller": "catalog:frontend"
+    "vue-router-better-scroller": "catalog:frontend",
+    "vue-utterances": "^0.3.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
