@@ -1,17 +1,39 @@
 <script setup lang="ts">
-import type { MediaType } from '../../data/media'
-import { media } from '../../data/media'
+import { formatDate } from '~/logics'
+import { supabase } from '~/logics/supabase'
+
+type MediaType = 'book' | 'movie' | 'drama' | 'post' | 'tool'
+type MediaState = 'done' | 'doing' | 'todo'
+
+interface MediaRecord {
+  name: string
+  created_at: string
+  type: MediaType
+  creator?: string
+  state?: MediaState
+  lang?: string
+  url?: string
+}
 
 const route = useRoute()
-
-const type = computed<MediaType>(() => route.query.type as MediaType || 'anime')
+const type = computed<MediaType>(() => route.query.type as MediaType || 'post')
+const media = ref([] as MediaRecord[])
+onMounted(async () => {
+  const data = await supabase.from('bookmark')
+    .select('*')
+    .eq('enabled', true)
+    .order('created_at', { ascending: false })
+  if (data.status === 200) {
+    media.value = data.data as unknown as MediaRecord[]
+  }
+})
 </script>
 
 <template>
   <div font-mono>
-    <div flex="~ gap-2">
+    <div flex="~ gap-4">
       <RouterLink
-        v-for="t of Object.keys(media)"
+        v-for="t of ['post', 'tool', 'book', 'movie', 'drama']"
         :key="t"
         :to="{ query: { type: t } }"
         px-2
@@ -22,19 +44,18 @@ const type = computed<MediaType>(() => route.query.type as MediaType || 'anime')
       </RouterLink>
     </div>
 
-    <template v-for="t of Object.keys(media)" :key="t">
-      <table v-show="type === t" lang="ja" font-400 lg-md="mr--20 w-[calc(100%+10rem)]!">
+    <template v-for="t of ['post', 'tool', 'book', 'movie', 'drama']" :key="t">
+      <table v-show="type === t" font-400 class="!w-4/5">
         <tbody>
-          <template v-for="m of media[type]" :key="m.name">
-            <tr v-if="!m.state" v-bind="m.lang ? { lang: m.lang } : {}">
-              <td>{{ m.name }}</td>
+          <template v-for="m in media.filter((m) => m.type === t)" :key="m.name">
+            <tr v-if="!m.state">
+              <td><a :href="m.url">{{ m.name }}</a></td>
               <td text-right>
                 {{ m.creator }}
               </td>
-              <td lt-sm:hidden>
-                {{ m.date }}
+              <td v-if="false" lt-sm:hidden>
+                {{ formatDate(m.created_at) }}
               </td>
-              <td>{{ m.note }}</td>
             </tr>
           </template>
         </tbody>

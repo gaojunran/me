@@ -1,4 +1,9 @@
 packages: []
+catalog:
+  '@iconify-json/lucide': ^1.2.41
+  '@iconify-json/material-symbols-light': ^1.2.20
+  '@supabase/supabase-js': ^2.49.4
+  vue-utterances: ^0.3.4
 catalogs:
   build:
     '@shikijs/markdown-it': ^3.2.1
@@ -85,7 +90,3 @@ onlyBuiltDependencies:
   - exifreader
   - sharp
   - simple-git-hooks
-catalog:
-  '@iconify-json/lucide': ^1.2.41
-  '@iconify-json/material-symbols-light': ^1.2.20
-  vue-utterances: ^0.3.4

@@ -1,41 +1,34 @@
-// 媒体消费。TODO。
+// 个人收藏。
 
-export type MediaType = 'anime' | 'book' | 'movie' | 'drama' | 'game'
-export type MediaState = 'done' | 'doing' | 'todo'
+export type MediaType = 'book' | 'movie' | 'drama' | 'post' | 'tool'
+export
 
-export interface MediaRecord {
-  name: string
-  creator?: string
-  state?: MediaState
-  date?: string
-  note?: string
-  lang?: string
-}
+export
 
-export const anime: MediaRecord[] = [
-  
-]
+  export const book: MediaRecord[] = [
 
-export const book: MediaRecord[] = [
-  
-]
+  ]
 
 export const movie: MediaRecord[] = [
-  
+
 ]
 
 export const drama: MediaRecord[] = [
-  
+
 ]
 
-export const game: MediaRecord[] = [
-  
+export const post: MediaRecord[] = [
+
+]
+
+export const tool: MediaRecord[] = [
+
 ]
 
 export const media: Record<MediaType, MediaRecord[]> = {
-  anime,
+  post,
+  tool,
   drama,
   movie,
-  game,
   book,
 }

@@ -14,6 +14,7 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
+    "@supabase/supabase-js": "catalog:",
     "@unhead/vue": "catalog:frontend",
     "@unocss/reset": "catalog:frontend",
     "@vueuse/core": "catalog:frontend",

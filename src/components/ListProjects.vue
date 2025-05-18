@@ -9,7 +9,7 @@ function slug(name: string) {
 <template>
   <div class="max-w-300 mx-auto">
     <p text-center mt--6 mb5 op50 text-lg italic>
-      我的一些开源项目。
+      我的一些开源项目。本页维护中。
     </p>
     <div
       v-for="key, cidx in Object.keys(projects)" :key="key" slide-enter

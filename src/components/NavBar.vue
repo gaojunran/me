@@ -46,6 +46,10 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
+        <RouterLink to="/bookmarks" title="Bookmarks">
+          <span class="lt-md:hidden">Bookmarks</span>
+          <div i-ri:heart-line class="md:hidden" />
+        </RouterLink>
         <a href="https://www.travellings.cn/go.html" target="_blank" title="Travellings">
           <div i-lucide:train-front class="" />
         </a>
