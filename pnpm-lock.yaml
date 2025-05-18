@@ -79,6 +79,9 @@ catalogs:
     '@iconify-json/material-symbols-light':
       specifier: ^1.2.20
       version: 1.2.20
+    '@supabase/supabase-js':
+      specifier: ^2.49.4
+      version: 2.49.4
     vue-utterances:
       specifier: ^0.3.4
       version: 0.3.4
@@ -253,7 +256,7 @@ importers:
   .:
     dependencies:
       '@supabase/supabase-js':
-        specifier: ^2.49.4
+        specifier: 'catalog:'
         version: 2.49.4
       '@unhead/vue':
         specifier: catalog:frontend
