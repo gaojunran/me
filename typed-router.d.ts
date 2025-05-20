@@ -29,6 +29,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/adding-wakatime-page': RouteRecordInfo<'/posts/adding-wakatime-page', '/posts/adding-wakatime-page', Record<never, never>, Record<never, never>>,
     '/posts/ai-works-for-you': RouteRecordInfo<'/posts/ai-works-for-you', '/posts/ai-works-for-you', Record<never, never>, Record<never, never>>,
     '/posts/do-not-install-macos-in-external-disk': RouteRecordInfo<'/posts/do-not-install-macos-in-external-disk', '/posts/do-not-install-macos-in-external-disk', Record<never, never>, Record<never, never>>,
+    '/posts/how-fd-runs-fast': RouteRecordInfo<'/posts/how-fd-runs-fast', '/posts/how-fd-runs-fast', Record<never, never>, Record<never, never>>,
     '/posts/how-i-manage-environment-versions': RouteRecordInfo<'/posts/how-i-manage-environment-versions', '/posts/how-i-manage-environment-versions', Record<never, never>, Record<never, never>>,
     '/posts/lanqiao-2023-1': RouteRecordInfo<'/posts/lanqiao-2023-1', '/posts/lanqiao-2023-1', Record<never, never>, Record<never, never>>,
     '/posts/lanqiao-2023-2': RouteRecordInfo<'/posts/lanqiao-2023-2', '/posts/lanqiao-2023-2', Record<never, never>, Record<never, never>>,

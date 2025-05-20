@@ -45,7 +45,7 @@ onMounted(async () => {
     </div>
 
     <template v-for="t of ['post', 'tool', 'book', 'movie', 'drama']" :key="t">
-      <table v-show="type === t" font-400 class="!w-4/5">
+      <table v-show="type === t" font-400>
         <tbody>
           <template v-for="m in media.filter((m) => m.type === t)" :key="m.name">
             <tr v-if="!m.state">
