@@ -101,6 +101,15 @@ code .diff.add:before {
   color: #3dd68c;
 }
 
+code .diff.remove {
+  background-color: rgba(239, 68, 68, .16);
+}
+
+code .diff.remove:before {
+  content: "-";
+  color: #f53838;
+}
+
 .prose hr {
   width: 50px;
   margin: 2em auto;
