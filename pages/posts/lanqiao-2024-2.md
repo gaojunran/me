@@ -235,24 +235,25 @@ function testStructDFS() {
 
 ```js
 function structDFS(rootNodes, names, value) {
-  const stack = [{ siblings: rootNodes, names }];
+  const stack = [{ siblings: rootNodes, names }]
 
   while (stack.length) {
-    const { siblings, names } = stack.pop();
+    const { siblings, names } = stack.pop()
 
-    const curr = names.shift();
+    const curr = names.shift()
 
-    let node = siblings.find(n => n.name === curr);
+    let node = siblings.find(n => n.name === curr)
 
     if (!node) {
-      node = { name: curr, children: [] };
-      siblings.push(node);
+      node = { name: curr, children: [] }
+      siblings.push(node)
     }
 
     if (names.length === 0) {
-      node.value = value;
-    } else {
-      stack.push({ siblings: node.children, names });
+      node.value = value
+    }
+    else {
+      stack.push({ siblings: node.children, names })
     }
   }
 }
@@ -262,7 +263,7 @@ function structDFS(rootNodes, names, value) {
 
 ```js
 function structDFS(rootNodes, names, value) {
-  const stack = [{ siblings: rootNodes, names }];
+  const stack = [{ siblings: rootNodes, names }]
 
   while (stack.length) {
     // TODO
@@ -274,8 +275,8 @@ function structDFS(rootNodes, names, value) {
 
 ```js
 while (stack.length) {
-    const { siblings, names } = stack.pop(); /* [!code ++] */
-    const curr = names.shift(); /* [!code ++] */
+  const { siblings, names } = stack.pop() /* [!code ++] */
+  const curr = names.shift() /* [!code ++] */
 }
 ```
 
@@ -283,13 +284,13 @@ while (stack.length) {
 
 ```js
 while (stack.length) {
-    const { siblings, names } = stack.pop();
-    const curr = names.shift();
-    let node = siblings.find(n => n.name === curr); /* [!code ++] */
-    if (!node) { /* [!code ++] */
-      node = { name: curr, children: [] }; /* [!code ++] */
-      siblings.push(node); /* [!code ++] */
-    } /* [!code ++] */
+  const { siblings, names } = stack.pop()
+  const curr = names.shift()
+  let node = siblings.find(n => n.name === curr) /* [!code ++] */
+  if (!node) { /* [!code ++] */
+    node = { name: curr, children: [] } /* [!code ++] */
+    siblings.push(node) /* [!code ++] */
+  } /* [!code ++] */
 }
 ```
 
@@ -300,18 +301,19 @@ while (stack.length) {
 
 ```js
 while (stack.length) {
-    const { siblings, names } = stack.pop();
-    const curr = names.shift();
-    let node = siblings.find(n => n.name === curr);
-    if (!node) {
-      node = { name: curr, children: [] };
-      siblings.push(node);
-    }
-    if (names.length === 0) {  /* [!code ++] */
-      node.value = value; /* [!code ++] */
-    } else { /* [!code ++] */
-      stack.push({ siblings: node.children, names }); /* [!code ++] */
-    }
+  const { siblings, names } = stack.pop()
+  const curr = names.shift()
+  let node = siblings.find(n => n.name === curr)
+  if (!node) {
+    node = { name: curr, children: [] }
+    siblings.push(node)
+  }
+  if (names.length === 0) { /* [!code ++] */
+    node.value = value /* [!code ++] */
+  }
+  else { /* [!code ++] */
+    stack.push({ siblings: node.children, names }) /* [!code ++] */
+  }
 }
 ```
 
@@ -346,24 +348,24 @@ function structBFS(rootNodes, names, value) {
 掌握这种思想，就可以解决很多题目了！
 
 > 思考题：怎么把题目中的树形结构递归地转成如下这种结构：
+>
 > ```json
 > [
 >   {
->       "a": [
->         {
->           "b": [
->             { "c": 1 },
->             { "d": 2 }
->           ]
->         },
->         { "e": 3 }
->       ]
->     },
->     {
->       "x": [
->         { "y": 4 }
->       ]
->     }
+>     "a": [
+>       {
+>         "b": [
+>           { "c": 1 },
+>           { "d": 2 }
+>         ]
+>       },
+>       { "e": 3 }
+>     ]
+>   },
+>   {
+>     "x": [
+>       { "y": 4 }
+>     ]
+>   }
 > ]
 > ```
-
