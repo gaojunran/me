@@ -288,7 +288,8 @@ function checkMap() {
 const idxs = Array.from({ length: 3 }, (_, i) => i) // [0, 1, 2]
 const conditions = [
   // Check rows
-  map.some(row => row.every(cell => cell === player)),
+  map.some(row => idxs.every(i => row[i] === player)),
+  // OR: map.some(row => row.every(cell => cell === player)),
   // Check columns
   idxs.some(i => map.every(row => row[i] === player)),
   // Check main diagonal (top-left to bottom-right)
@@ -389,8 +390,8 @@ function formatOptions(toolbar) {
     else {
       const item = cate[0] // { header: [1, 2] }  /* [!code ++] */
       let entries = Object.entries(item).map(([k, v]) => { /* [!code ++] */
-        // k: header /* [!code ++] */
-        // v: [1, 2] /* [!code ++] */
+        // k: header
+        // v: [1, 2]
         const obj = toolsMap[k] /* [!code ++] */
         obj.options = Object.fromEntries(Object.entries(obj.childrens) /* [!code ++] */
           .filter(([key, _]) => v.map(String).includes(key)) // key: 1 /* [!code ++] */
