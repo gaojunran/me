@@ -52,9 +52,9 @@ function removeTarget() {
 }
 ```
 
-## 简易 WebPack
+## 简易 webpack
 
-题目：<LanqiaoLink name="简易 WebPack" id="18588" />
+题目：<LanqiaoLink name="简易 webpack" id="18588" />
 
 > 此题为 Node.js 代码题，职业组不考察。
 
@@ -111,7 +111,7 @@ fs.writeFileSync(indexOutputPath, indexContent)
 require('node:child_process').execSync(`cp -r ${path.join(__dirname, 'static')} ${webpack.output.path}`)
 ```
 
-借助命令行工具 `cp` 来复制文件夹，非常巧妙。（这种做法通常依赖评测机是 Unix 系统，所以它只应该在你正常做法做不出来的时候才使用）
+借助命令行工具 `cp` 来复制文件夹，非常巧妙。（这种做法通常依赖评测机是 UNIX 系统，所以它只应该在你正常做法做不出来的时候才使用）
 
 ## 会议日程
 

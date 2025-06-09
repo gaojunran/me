@@ -51,7 +51,7 @@ export def --env cvp [
 
 我有两个电脑，一个Windows一个Mac（这很痛苦了😭），这意味着我不仅需要同步配置，还需要尽量保证我的脚本在 Windows、MacOS 和 Linux 平台上都是可用的。
 
-经过一些挑选之后，我选中了[chezmoi](https://github.com/twpayne/chezmoi)这个工具，它可以将寄存在 Github 上的配置仓库同步到你的新设备上。
+经过一些挑选之后，我选中了[chezmoi](https://github.com/twpayne/chezmoi)这个工具，它可以将寄存在 GitHub 上的配置仓库同步到你的新设备上。
 
 如果你很信任我，可以直接使用我的配置！安装`chezmoi`和`nushell`后直接运行：
 

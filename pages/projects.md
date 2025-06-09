@@ -163,7 +163,7 @@ projects:
   # UnJS Ecosystem:
   #   - name: 'unplugin'
   #     link: 'https://github.com/unjs/unplugin'
-  #     desc: 'Unified plugin system for Vite, Rollup, and Webpack'
+  #     desc: 'Unified plugin system for Vite, Rollup, and webpack'
   #     icon: 'i-carbon-plug'
   #   - name: 'unimport'
   #     link: 'https://github.com/unjs/unimport'
@@ -181,7 +181,7 @@ projects:
   # Unplugins:
   #   - name: 'unplugin'
   #     link: 'https://github.com/unjs/unplugin'
-  #     desc: 'Unified plugin system for Vite, Rollup, and Webpack'
+  #     desc: 'Unified plugin system for Vite, Rollup, and webpack'
   #     icon: 'i-carbon-plug'
   #   - name: 'unplugin-icons'
   #     link: 'https://github.com/unplugin/unplugin-icons'
@@ -193,7 +193,7 @@ projects:
   #     icon: 'i-carbon-workspace-import'
   #   - name: 'unplugin-auto-import'
   #     link: 'https://github.com/unplugin/unplugin-auto-import'
-  #     desc: 'Auto import APIs on-demand for Vite, Webpack and Rollup'
+  #     desc: 'Auto import APIs on-demand for Vite, webpack and Rollup'
   #     icon: 'i-carbon-row-insert'
   #   - name: 'unplugin-vue2-script-setup'
   #     link: 'https://github.com/unplugin/unplugin-vue2-script-setup'
@@ -311,7 +311,7 @@ projects:
   #     icon: 'i-carbon-ai-results-high'
   #   - name: 'esno'
   #     link: 'https://github.com/antfu/esno'
-  #     desc: 'TypeScript / ESNext node runtime powered by ESBuild'
+  #     desc: 'TypeScript / ESNext node runtime powered by esbuild'
   #     icon: 'i-mdi-hexagon-slice-4'
 
   # VS Code:

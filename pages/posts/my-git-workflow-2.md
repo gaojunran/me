@@ -116,7 +116,7 @@ else: # 输出为空说明未追踪
 
 还有一个与之对应的函数`unstage-interactive`，用于将暂存区的文件取消暂存。代码比较类似就不再赘述了。
 
-说句题外话，我们这里的交互做得已经不错了，甚至考虑到了`untracked`文件不会在`git diff`中展示的情况；但是 TUI 或者 GUI 工具的交互体验还是要比我们的小脚本好得多。这里我重点推荐 [lazygit](https://github.com/jesseduffield/lazygit) 和 Intellij IDEA 上自带的 Git 工具，在交互上都做得非常优秀。
+说句题外话，我们这里的交互做得已经不错了，甚至考虑到了`untracked`文件不会在`git diff`中展示的情况；但是 TUI 或者 GUI 工具的交互体验还是要比我们的小脚本好得多。这里我重点推荐 [lazygit](https://github.com/jesseduffield/lazygit) 和 IntelliJ IDEA 上自带的 Git 工具，在交互上都做得非常优秀。
 
 所以写脚本的最大目的还是熟悉`git`命令本身。在编写这个函数的时候，我对于`git diff`会展示什么内容有疑问，通过`tldr git diff`查看帮助解决了。这个`tldr`确实很实用！
 
@@ -132,7 +132,7 @@ else: # 输出为空说明未追踪
 
 多数时候我们希望**把更改暂存起来 -> 切换到其它分支 -> 等回到原分支再恢复暂存**，这是一个非常常见的操作，所以我们可以写一个`smart-switch`函数来增强我们的切换分支功能！
 
-> Intellij IDEA 有这个功能，叫智能检出（Smart Checkout）。
+> IntelliJ IDEA 有这个功能，叫智能检出（Smart Checkout）。
 
 以从`dev`分支切换到`main`分支为例。在检出分支前如果当前工作区有更改，就暂存起来。暂存时可以携带一个信息`STASH-dev`表示这是`dev`分支上的修改：
 

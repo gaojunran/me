@@ -42,7 +42,7 @@ function slug(name: string) {
             <VueUse v-else-if="item.icon === 'vueuse'" class="text-4xl opacity-50" />
             <VueReactivity v-else-if="item.icon === 'vue-reactivity'" class="text-4xl opacity-50" />
             <VueDemi v-else-if="item.icon === 'vue-demi'" class="text-4xl opacity-50" />
-            <Unocss v-else-if="item.icon === 'unocss'" class="text-4xl opacity-50" />
+            <UnoCSS v-else-if="item.icon === 'unocss'" class="text-4xl opacity-50" />
             <Vitest v-else-if="item.icon === 'vitest'" class="text-4xl opacity-50" />
             <Elk v-else-if="item.icon === 'elk'" class="text-4xl opacity-50" />
             <AnthonyFu v-else-if="item.icon === 'af'" class="text-4xl opacity-50" />
