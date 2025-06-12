@@ -28,6 +28,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/about-principles-of-compiling-1': RouteRecordInfo<'/posts/about-principles-of-compiling-1', '/posts/about-principles-of-compiling-1', Record<never, never>, Record<never, never>>,
     '/posts/adding-wakatime-page': RouteRecordInfo<'/posts/adding-wakatime-page', '/posts/adding-wakatime-page', Record<never, never>, Record<never, never>>,
     '/posts/ai-works-for-you': RouteRecordInfo<'/posts/ai-works-for-you', '/posts/ai-works-for-you', Record<never, never>, Record<never, never>>,
+    '/posts/control-mihome-devices': RouteRecordInfo<'/posts/control-mihome-devices', '/posts/control-mihome-devices', Record<never, never>, Record<never, never>>,
     '/posts/diving-into-code': RouteRecordInfo<'/posts/diving-into-code', '/posts/diving-into-code', Record<never, never>, Record<never, never>>,
     '/posts/do-not-install-macos-in-external-disk': RouteRecordInfo<'/posts/do-not-install-macos-in-external-disk', '/posts/do-not-install-macos-in-external-disk', Record<never, never>, Record<never, never>>,
     '/posts/how-i-manage-environment-versions': RouteRecordInfo<'/posts/how-i-manage-environment-versions', '/posts/how-i-manage-environment-versions', Record<never, never>, Record<never, never>>,
