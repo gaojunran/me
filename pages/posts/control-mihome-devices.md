@@ -176,14 +176,13 @@ bore local 8123 --to <你的云服务器公网IP>
 }
 ```
 
-`http://.../mihome` 本质上是 `http://...:80/mihome`，因为 80 端口是 HTTP 的默认端口。所以我们使用 Caddy 监听 80 端口，将发往 80 端口的 `/mihome/*` 请求转发到 8081 端口。`handle_path` 可以把 `/mihome` 这部分去掉作为新的路径。 
+`http://.../mihome` 本质上是 `http://...:80/mihome`，因为 80 端口是 HTTP 的默认端口。所以我们使用 Caddy 监听 80 端口，将发往 80 端口的 `/mihome/*` 请求转发到 8081 端口。`handle_path` 可以把 `/mihome` 这部分去掉作为新的路径。
 
 不要把自己绕晕了！Home Assistant 服务经历了这样的网络传输：
 
 本机的 8123 端口 --- **内网穿透** ---> 云服务器的 8081 端口 --- **反向代理** ---> 云服务器的 80 端口
 
 🎉 现在你可以通过 `http://<你的公网IP>/mihome/api/...` 来访问 Home Assistant 的 API 了！
-
 
 ## 难题三：跨域
 
@@ -228,40 +227,36 @@ if __name__ == "__main__":
 接着使用 Vue 编写一个简单的按钮来控制我的台灯：
 
 ```vue
+<script setup>
+const state = ref('Click me!')
+
+function toggleLamp() {
+  fetch('http://123.249.70.0/api/blog/test-mihome')
+    .then(res => res.json())
+    .then((res) => {
+      const rawState = JSON.parse(res.data)?.[0]?.state
+      if (rawState === 'off') {
+        state.value = 'OFF'
+      }
+      else if (rawState === 'on') {
+        state.value = 'ON'
+      }
+    })
+    .catch(() => {
+      state.value = 'Error'
+    })
+}
+</script>
+
 <template>
   <div class="flex justify-center my-2">
-    <button @click="toggleLamp" class="bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 hover:shadow-md rounded-2xl px-4 py-2 text-sm font-medium transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
-    {{ mapping[state].toUpperCase() }}
+    <button :disabled="new Date().getHours() >= 0 && new Date().getHours() <= 8" class="..." @click="toggleLamp">
+      {{ state }}
     </button>
   </div>
 </template>
-
-<script setup>
-const mapping = ["点我控制台灯", "off", "on", "error"]
-const state = ref(0)
-
-const toggleLamp = () => {
-  fetch('http://123.249.70.0/api/blog/test-mihome')
-  .then(res => res.json())
-  .then(res => {
-    const rawState = JSON.parse(res.data)?.[0]?.state
-    if (rawState === 'off') {
-      state.value = 2
-    } else if (rawState === 'on') {
-      state.value = 1
-    } else {
-      state.value = 0
-    }
-  })
-  .catch(() => {
-    state.value = 3
-  })
-}
-</script>
 ```
 
 来试试这个按钮吧！
 
 <LampButton />
-
-
