@@ -122,7 +122,7 @@ $('#removeAll').click(() => {
 
 注意！我们必须将 `left.selectedOptions` 拷贝出来，因为如果你将 `left.selectedOptions` 传入 `toggle`，在 `toggle` 函数内部会在 **循环内部修改被迭代的对象**，导致结果出错！
 
-> 建议通过 JavaScript DOM API 得到的类数组、可迭代对象，都应该拷贝成数组在使用，这样既安全，又可以方便地使用数组的 API。
+> 建议通过 JavaScript DOM API 得到的类数组、可迭代对象，都应该拷贝成数组再使用，这样既安全，又可以方便地使用数组的 API。
 
 还有一个问题，我是如何知道 `selectedOptions` 这个属性的？肯定不是因为我背下来了这个属性，而是使用了 `console.dir` 来查看 DOM 对象的全部 JS 属性 ，然后找到的。这个经验非常有用。
 

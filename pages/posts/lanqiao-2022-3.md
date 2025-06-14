@@ -69,9 +69,9 @@ menuList.forEach((menu) => {
 })
 
 let stack = [...menuList
-  .filter(menu => menu.parentId === -1)
-  .map(menu => ({
-    menu,
+  .filter(m => m.parentId === -1)
+  .map(m => ({
+    menu: m,
     siblings: menus
   }))]
 ```
@@ -96,9 +96,9 @@ while (stack.length > 0) {
 
 ```js
 stack.push(...menuList
-  .filter(menu => menu.parentId === menu.id)
-  .map(menu => ({
-    menu,
+  .filter(m => m.parentId === menu.id)
+  .map(m => ({
+    menu: m,
     siblings: menu.children
   })))
 ```

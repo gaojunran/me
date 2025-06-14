@@ -124,32 +124,9 @@ if (acc.length !== 0 && acc[acc.length - 1].length < num) { /* ... */ } /* [!cod
 }
 ```
 
-这是题解区一个同学的答案。你可能会思考，主轴方向和交叉轴方向明明逻辑一样，为什么一个可以用 `justify-content` 来实现，另一个要给子元素分别用 `align-self` 来实现呢？
+这是题解区一个同学的答案。
 
-事实上我们不常用 `flex` 的 `align-content` 属性，但是它是能用的！只要给 `flex-wrap` 设为 `wrap`，`align-content` 就能生效了。所以我们可以这样写（甚至可以用 `place-content` 来进一步简化代码）：
-
-```css
-.box {
-  display: flex;
-  flex-wrap: wrap;
-}
-#box1 {
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-#box2 {
-  justify-content: space-between;
-  align-content: space-between;
-}
-
-#box3 {
-  justify-content: space-between;
-  align-content: space-between;
-}
-```
-
-不过这种做法通不过评测，但是实现的效果是一样的。😂
+> 拓展：`align-content` 在 `flex` 中也是可用的，它的作用是**调整主轴上所有行的对齐方式**，前提是需要**有多个行**（使用 `flex-wrap` 允许在可折行时折行）。
 
 ## 水果消消乐
 
