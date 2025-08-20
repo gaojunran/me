@@ -1,5 +1,5 @@
 ---
-title: 正式介绍我的终极Nushell配置
+title: 你应该尝试一下 nushell
 date: 2025-04-19T00:00:00Z
 lang: zh
 duration: 6min
@@ -56,7 +56,9 @@ export def --env cvp [
 如果你很信任我，可以直接使用我的配置！安装`chezmoi`和`nushell`后直接运行：
 
 ```bash
-chezmoi init --apply gaojunran
+chezmoi init --apply gaojunran -k
+# 当遇到输入密码时直接回车跳过即可，
+# 密码加密的是我的一些私有配置，如 API key
 ```
 
 我已经在我室友的崭新电脑上测试过了，应该可以开箱即用，希望你能喜欢！

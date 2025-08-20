@@ -48,6 +48,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/os-01-fd': RouteRecordInfo<'/posts/os-01-fd', '/posts/os-01-fd', Record<never, never>, Record<never, never>>,
     '/posts/smarter-clone': RouteRecordInfo<'/posts/smarter-clone', '/posts/smarter-clone', Record<never, never>, Record<never, never>>,
     '/posts/vue-computed-model': RouteRecordInfo<'/posts/vue-computed-model', '/posts/vue-computed-model', Record<never, never>, Record<never, never>>,
+    '/posts/write-shims-for-mise-managed-clis': RouteRecordInfo<'/posts/write-shims-for-mise-managed-clis', '/posts/write-shims-for-mise-managed-clis', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/videos': RouteRecordInfo<'/videos', '/videos', Record<never, never>, Record<never, never>>,
   }

@@ -7,6 +7,9 @@ duration: 15min
 
 [[toc]]
 
+> [!WARNING]
+> 本文已过时。其中的内容依然可用，但我开发的基于 [jujutsu](https://github.com/jj-vcs/jj) 的 [hj](https://github.com/gaojunran/hj) 已经取代了本文中的脚本，具有更好的 Git、Git Forge 工作体验。欢迎尝试。
+
 > [前文](/posts/my-git-workflow)介绍了三种 Git 工作流模型，本文介绍一些补充内容和我对我 Git 脚本的改进。
 
 > 本文的所有脚本都是`nushell`脚本，后续我会在有时间的时候改写成其它更大众的语言。当然如果你看懂了原理，也可以自己实现一下！
