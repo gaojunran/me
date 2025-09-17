@@ -128,6 +128,7 @@ export default defineConfig({
           linksMap: {
             重庆邮电大学: 'https://www.cqupt.edu.cn/',
             Vue: 'https://vuejs.org/',
+            React: 'https://react.dev/',
             TypeScript: 'https://www.typescriptlang.org/',
             Rust: 'https://www.rust-lang.org',
             Kotlin: 'https://kotlinlang.org/',

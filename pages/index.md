@@ -4,11 +4,11 @@ description: CodeNebula's Portfolio
 art: dots
 ---
 
-👏🏻 你好！我叫**高浚然**，是一名**开源爱好者**和**视频博主**。
+👏🏻 你好！我叫 **高浚然**，是一名 **Web 开发者**。
 
 在读 {重庆邮电大学} 的软件工程专业；
 
-熟悉 {Vue} {TypeScript} {Rust} {Kotlin}；
+熟悉 {Vue} {React} {TypeScript} {Rust} {Kotlin}；
 
 💪🏻 正在寻找 **前端开发** 的实习机会。
 
