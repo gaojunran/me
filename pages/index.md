@@ -10,7 +10,7 @@ art: dots
 
 熟悉 {Vue} {React} {TypeScript} {Rust} {Kotlin}；
 
-💪🏻 正在寻找 **前端开发** 的实习机会。
+💼 现在在 [腾讯 WXG 小程序部门](https://www.tencent.com/zh-cn/about.html#about-con-4) 实习。
 
 ---
 
