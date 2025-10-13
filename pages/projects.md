@@ -5,11 +5,22 @@ description: List of projects that I am proud of
 wrapperClass: 'text-center'
 art: dots
 projects:
-  TODO:
-    - name: 'TODO'
-      link: 'https://github.com/antfu/todo'
-      desc: 'A simple TODO app'
-      icon: 'i-logos-vue'
+  Rust:
+    - name: 'hj'
+      link: 'https://github.com/gaojunran/hj'
+      desc: '一个极简的版本控制系统。'
+      icon: 'i-mdi:source-branch'
+
+    - name: 'pitchfork'
+      link: 'https://github.com/jdx/pitchfork'
+      desc: '守护进程管理器。充满 DX ✨'
+      icon: 'i-mdi:account-tie-hat'
+
+    - name: 'auto-launch'
+      link: 'https://github.com/gaojunran/auto-launch'
+      desc: 'Rust 自动启动库。'
+      icon: 'i-mdi:rocket-launch'
+
   # Current Focus:
   #   - name: 'Vite DevTools'
   #     link: 'https://github.com/antfu/vite-devtools'
