@@ -49,6 +49,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/smarter-clone': RouteRecordInfo<'/posts/smarter-clone', '/posts/smarter-clone', Record<never, never>, Record<never, never>>,
     '/posts/vue-computed-model': RouteRecordInfo<'/posts/vue-computed-model', '/posts/vue-computed-model', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
+    '/tasks': RouteRecordInfo<'/tasks', '/tasks', Record<never, never>, Record<never, never>>,
     '/videos': RouteRecordInfo<'/videos', '/videos', Record<never, never>, Record<never, never>>,
   }
 }

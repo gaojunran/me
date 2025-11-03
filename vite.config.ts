@@ -1,7 +1,10 @@
-import { Buffer } from 'node:buffer'
-import { basename, dirname, resolve } from 'node:path'
+import { resolve } from 'node:path'
 import MarkdownItShiki from '@shikijs/markdown-it'
-import { transformerNotationDiff, transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers'
+import {
+  transformerNotationDiff,
+  transformerNotationHighlight,
+  transformerNotationWordHighlight,
+} from '@shikijs/transformers'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import Vue from '@vitejs/plugin-vue'
 import fs from 'fs-extra'
@@ -12,7 +15,6 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import MarkdownItMagicLink from 'markdown-it-magic-link'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
-import sharp from 'sharp'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -31,9 +33,16 @@ const promises: Promise<any>[] = []
 
 export default defineConfig({
   resolve: {
-    alias: [
-      { find: '~/', replacement: `${resolve(__dirname, 'src')}/` },
-    ],
+    alias: [{ find: '~/', replacement: `${resolve(__dirname, 'src')}/` }],
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://api.codenebula.top',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, ''),
+      },
+    },
   },
   optimizeDeps: {
     include: [
@@ -70,12 +79,12 @@ export default defineConfig({
     }),
 
     Markdown({
-      wrapperComponent: id => id.includes('/demo/')
-        ? 'WrapperDemo'
-        : 'WrapperPost',
-      wrapperClasses: (id, code) => code.includes('@layout-full-width')
-        ? ''
-        : 'prose m-auto slide-enter-content',
+      wrapperComponent: id =>
+        id.includes('/demo/') ? 'WrapperDemo' : 'WrapperPost',
+      wrapperClasses: (id, code) =>
+        code.includes('@layout-full-width')
+          ? ''
+          : 'prose m-auto slide-enter-content',
       headEnabled: true,
       exportFrontmatter: false,
       exposeFrontmatter: false,
@@ -84,23 +93,25 @@ export default defineConfig({
         quotes: '""\'\'',
       },
       async markdownItSetup(md) {
-        md.use(await MarkdownItShiki({
-          themes: {
-            dark: 'vitesse-dark',
-            light: 'vitesse-light',
-          },
-          defaultColor: false,
-          cssVariablePrefix: '--s-',
-          transformers: [
-            transformerTwoslash({
-              explicitTrigger: true,
-              renderer: rendererRich(),
-            }),
-            transformerNotationDiff(),
-            transformerNotationHighlight(),
-            transformerNotationWordHighlight(),
-          ],
-        }))
+        md.use(
+          await MarkdownItShiki({
+            themes: {
+              dark: 'vitesse-dark',
+              light: 'vitesse-light',
+            },
+            defaultColor: false,
+            cssVariablePrefix: '--s-',
+            transformers: [
+              transformerTwoslash({
+                explicitTrigger: true,
+                renderer: rendererRich(),
+              }),
+              transformerNotationDiff(),
+              transformerNotationHighlight(),
+              transformerNotationWordHighlight(),
+            ],
+          }),
+        )
 
         md.use(anchor, {
           slugify,
@@ -121,7 +132,8 @@ export default defineConfig({
         md.use(TOC, {
           includeLevel: [1, 2, 3, 4],
           slugify,
-          containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
+          containerHeaderHtml:
+            '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
         })
 
         md.use(MarkdownItMagicLink, {
@@ -161,10 +173,16 @@ export default defineConfig({
           },
           imageOverrides: [
             ['https://github.com/vuejs/core', 'https://vuejs.org/logo.svg'],
-            ['https://github.com/nuxt/nuxt', 'https://nuxt.com/assets/design-kit/icon-green.svg'],
+            [
+              'https://github.com/nuxt/nuxt',
+              'https://nuxt.com/assets/design-kit/icon-green.svg',
+            ],
             ['https://github.com/vitejs/vite', 'https://vitejs.dev/logo.svg'],
             ['https://github.com/sponsors', 'https://github.com/github.png'],
-            ['https://github.com/sponsors/antfu', 'https://github.com/github.png'],
+            [
+              'https://github.com/sponsors/antfu',
+              'https://github.com/github.png',
+            ],
             ['https://nuxtlabs.com', 'https://github.com/nuxtlabs.png'],
             [/opencollective\.com\/vite/, 'https://github.com/vitejs.png'],
             [/opencollective\.com\/elk/, 'https://github.com/elk-zone.png'],
@@ -194,11 +212,7 @@ export default defineConfig({
     }),
 
     AutoImport({
-      imports: [
-        'vue',
-        VueRouterAutoImports,
-        '@vueuse/core',
-      ],
+      imports: ['vue', VueRouterAutoImports, '@vueuse/core'],
     }),
 
     Components({
