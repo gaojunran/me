@@ -21,3 +21,8 @@ Cache-Control = "public, max-age=31536000, immutable"
 from = "/*"
 to = "/index.html"
 status = 200
+
+[[redirects]]
+from = "/api/*"
+to = "https://api.codenebula.top/:splat"
+status = 200
