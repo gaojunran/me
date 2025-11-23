@@ -28,6 +28,7 @@ import Inspect from 'vite-plugin-inspect'
 import Exclude from 'vite-plugin-optimize-exclude'
 import SVG from 'vite-svg-loader'
 import { slugify } from './scripts/slugify'
+import netlify from "@netlify/vite-plugin"
 
 const promises: Promise<any>[] = []
 
@@ -55,7 +56,7 @@ export default defineConfig({
   },
   plugins: [
     UnoCSS(),
-
+    netlify(),
     VueRouter({
       extensions: ['.vue', '.md'],
       routesFolder: 'pages',

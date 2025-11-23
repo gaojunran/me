@@ -16,3 +16,6 @@ src/data/sponsors-circles.json
 public/assets/fonts
 repomix-output.txt
 .env
+
+# Local Netlify folder
+.netlify

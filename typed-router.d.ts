@@ -51,5 +51,6 @@ declare module 'vue-router/auto-routes' {
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/tasks': RouteRecordInfo<'/tasks', '/tasks', Record<never, never>, Record<never, never>>,
     '/videos': RouteRecordInfo<'/videos', '/videos', Record<never, never>, Record<never, never>>,
+    '/wakatime': RouteRecordInfo<'/wakatime', '/wakatime', Record<never, never>, Record<never, never>>,
   }
 }

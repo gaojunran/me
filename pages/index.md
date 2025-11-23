@@ -20,12 +20,6 @@ art: dots
 
 ---
 
-我很热爱开源社区，欣赏社区小伙伴们的优质作品，你可以在 [这里](/bookmarks) 看到我收藏的「好东西」。我自己也开发和维护开源项目，展示在 [这里](/projects)。
-
-<div flex-auto />
-
----
-
 我的社交平台：
 <a href="https://github.com/gaojunran" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
 <a ml-4 href="https://space.bilibili.com/3493089530350281" target="_blank"><span op75 i-simple-icons-bilibili /> 哔哩哔哩</a>
