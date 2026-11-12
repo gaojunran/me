@@ -18,3 +18,5 @@
 **快速开始**: 查看 [WAKATIME_QUICKSTART.md](./WAKATIME_QUICKSTART.md)
 
 **完整文档**: 查看 [WAKATIME_DEPLOYMENT.md](./WAKATIME_DEPLOYMENT.md)
+
+Scratch paragraph for the pull request demo.
