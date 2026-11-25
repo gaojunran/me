@@ -1,0 +1,3 @@
+roster dismissal fixture
+
+A second account leaves a review here; the primary account dismisses it from the OpenChamber board and reads the result back from the API.
