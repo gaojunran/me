@@ -1,0 +1,5 @@
+Thread probe line 1, revised
+Thread probe line 2, revised
+Inserted above the anchor
+Thread probe line 5
+Thread probe line 6
